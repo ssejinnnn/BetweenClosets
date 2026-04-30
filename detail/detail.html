@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Detail | Between Closets</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+ <header>
+  <div class="page-title">closet</div>
+
+  <a href="../home/index.html" class="logo">Between Closets</a>
+
+  <nav>
+    <a href="../home/index.html">home</a>
+    <a href="../closet/closet.html">closet</a>
+    <a href="../advice/advice.html">share</a>
+    <a href="../style/style.html">style</a>
+    <a href="../about/about.html">about</a>
+    <a href="../seller/seller.html">profile</a>
+    <a href="../login/login.html">log in</a>
+  </nav>
+</header>
+
+  <main class="detail">
+    <section class="image-section">
+      <img id="itemImage" src="" alt="item">
+    </section>
+
+    <section class="info-section">
+      <p class="category" id="itemCategory"></p>
+      <h1 id="itemName"></h1>
+
+      <div class="heart-row">
+        <span class="heart">♡</span>
+        <span id="itemHearts"></span>
+      </div>
+
+      <p class="description" id="itemDescription"></p>
+
+      <div class="meta">
+        <p><span>condition</span> gently used / 9 out of 10</p>
+        <p><span>exchange</span> hearts only</p>
+        <p><span>location</span> Parsons / Union Square</p>
+        <p><span>seller</span> <button id="sellerLink" class="text-link">soho_archive</button></p>
+        <p><span>listed</span> <span id="listedDate"></span></p>
+      </div>
+
+      <div class="buttons">
+        <button id="requestBtn">Request Exchange</button>
+        <button id="viewSellerBtn">View Seller</button>
+        <button>Save to Closet</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="exchangeModal" class="modal">
+    <div class="modal-box">
+      <button id="closeModal" class="modal-close">×</button>
+      <p class="modal-label">exchange request</p>
+      <h2>Request sent</h2>
+      <p>Your exchange request has been sent to the seller. They will contact you if they accept your heart offer.</p>
+      <button class="modal-confirm">Okay</button>
+    </div>
+  </div>
+
+  <a href="../closet/closet.html" class="back">←</a>
+
+  <script src="detail.js"></script>
+</body>
+</html>
