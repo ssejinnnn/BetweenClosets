@@ -1,0 +1,343 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:white;
+  color:#111;
+  font-family:"Abel", sans-serif;
+  overflow:auto;
+}
+
+/* header - closet이랑 동일 */
+header{
+  height:82px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:start;
+  padding:22px 28px 0;
+  background:white;
+  border-top:8px solid #56343d;
+}
+
+.page-title{
+  font-size:14px;
+}
+
+.logo{
+  font-family:"Mea Culpa", cursive;
+  font-size:38px;
+  color:#111;
+  text-decoration:none;
+  line-height:1.5;
+}
+
+nav{
+  justify-self:end;
+  display:flex;
+  gap:28px;
+}
+
+nav a{
+  color:#111;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  opacity:.5;
+}
+
+/* closet처럼 로고 밑 설명 간격 */
+.share-intro{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:14px;      /* 🔥 여기 핵심 (전엔 -값이라 붙음) */
+  margin-bottom:34px;
+  background:white;
+  font-size:14px;
+  line-height:0.5;
+  opacity:.65;
+     border-top:1px solid #111;
+  border-bottom:1px solid #111;
+    padding:10px 0;  /* 이거 꼭 있어야 함 */
+    border-color: rgba(0,0,0,0.4);
+}
+
+
+/* closet처럼 controls */
+.share-controls{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px 18px;
+}
+
+.category-group{
+     display:flex;
+  gap:22px;
+font-size:16px;}
+
+.sort-group{
+  display:flex;
+  gap:22px;
+  font-size:14px;
+   border:none;
+  
+}
+
+.share-controls button{
+  border:none;
+  background:none;
+  font-family:"Abel", sans-serif;
+  cursor:pointer;
+  opacity:.45;
+}
+
+.share-controls button.active,
+.share-controls button:hover{
+  opacity:1;
+  text-decoration:underline;
+  text-underline-offset:6px;
+}
+
+/* page */
+.share-page{
+  width:100%;
+}
+
+/* 맨 위 1:1 */
+.top-area{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:start;
+}
+
+.top-grid{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+/* 오른쪽 new thread 영역 */
+.thread-zone{
+  min-height:380px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+/* new thread */
+.new-thread{
+  width:68%;
+  height:340px;
+  margin-top:28px;
+  border:1px solid #111;
+  background:white;
+  padding:26px 32px;
+  display:flex;
+  flex-direction:column;
+  transform:translateX(120px);
+}
+
+.thread-head{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:28px;
+}
+
+.thread-head p,
+.thread-head span{
+  font-size:12px;
+  opacity:.55;
+}
+
+.new-thread input,
+.new-thread textarea{
+  width:100%;
+  border:none;
+  background:transparent;
+  font-family:"Abel", sans-serif;
+  outline:none;
+}
+
+.new-thread input{
+  height:42px;
+  font-size:20px;
+  border-bottom:1px solid #111;
+  margin-bottom:18px;
+}
+
+.new-thread textarea{
+  flex:1;
+  resize:none;
+  font-size:12px;
+  line-height:1.45;
+  border-bottom:1px solid #111;
+  padding-top:6px;
+}
+
+.thread-note{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:12px;
+  font-size:9px;
+  opacity:.55;
+}
+
+.new-thread button{
+  width:120px;
+  height:34px;
+  border:1px solid #111;
+  border-radius:999px;
+  background:#f5edf1;
+  font-family:"Abel", sans-serif;
+  font-size:11px;
+  align-self:center;
+  cursor:pointer;
+  margin-top:16px;
+}
+
+.new-thread button:hover{
+  background:#111;
+  color:white;
+}
+
+/* 4 */
+.mid-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+}
+
+/* 6 / 6 / 6 */
+.small-grid{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+}
+
+/* card */
+.post-card{
+  padding:18px 22px;
+  border-right:1px solid #111;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  overflow:hidden;
+   cursor:pointer;
+}
+
+/* card heights */
+.top-grid .post-card{
+  height:380px;
+  font-size:13px;
+}
+
+.mid-grid .post-card{
+  height:315px;
+    font-size:10px;
+}
+
+.small-grid .post-card{
+  height:260px;
+  padding:14px 18px;
+}
+
+.meta{
+  font-size:9px;
+  text-transform:uppercase;
+  line-height:1.35;
+}
+
+/* image - 컬러 기본 + hover 확대 */
+.post-card img{
+  object-fit:cover;
+  align-self:center;
+  opacity:.9;
+  margin:12px 0;
+  display:block;
+  transition:transform .5s ease, filter .3s ease;
+}
+
+.post-card:hover img{
+  transform:scale(1.28);
+  filter:brightness(1.05);
+}
+
+.top-grid img{
+  width:50%;
+  height:175px;
+}
+
+.mid-grid img{
+  width:58%;
+  height:135px;
+}
+
+.small-grid img{
+  width:58%;
+  height:105px;
+}
+
+.post-card h3{
+  font-size:13px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.post-card .short{
+  font-size:10x;
+  line-height:1.15;
+  opacity:.6;
+  margin-top:4px;
+}
+
+.small-grid .meta{
+  font-size:7px;
+}
+
+.small-grid h3{
+  font-size:9.5px;
+}
+
+.small-grid .short{
+  font-size:7.5px;
+}
+
+.back{
+  position:fixed;
+  left:34px;
+  bottom:28px;
+  font-size:44px;
+  color:#111;
+  text-decoration:none;
+  transition:.25s ease;
+  z-index:30;
+}
+
+.back:hover{
+  transform:translateX(-6px);
+  opacity:.6;
+}
+
+@media(max-width:1000px){
+  .top-area{
+    grid-template-columns:1fr;
+  }
+
+  .mid-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .small-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .new-thread{
+    width:calc(100% - 60px);
+    transform:none;
+  }
+}

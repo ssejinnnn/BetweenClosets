@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share | Between Closets</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="advice.css">
+</head>
+
+<body>
+<header>
+  <div class="page-title">share</div>
+
+  <a href="../home/home.html" class="logo">Between Closets</a>
+
+  <nav>
+    <a href="../home/index.html">home</a>
+    <a href="../closet/closet.html">closet</a>
+    <a href="../advice/advice.html">share</a>
+    <a href="../style/style.html">style</a>
+    <a href="../about/about.html">about</a>
+    <a href="../seller/seller.html">profile</a>
+    <a href="../login/login.html">log in</a>
+  </nav>
+</header>
+
+<section class="share-intro">
+  Share styling questions and closet dilemmas. Helpful advice can earn hearts.
+</section>
+
+<section class="share-controls">
+  <div class="category-group">
+    <button class="active">ALL</button>
+    <button>STYLING</button>
+    <button>EXCHANGE</button>
+    <button>REPAIR</button>
+  </div>
+
+  <div class="sort-group">
+    <button class="active">RECENT</button>
+    <button>MOST HELPFUL</button>
+   
+  </div>
+</section>
+
+<main class="share-page">
+  <section class="top-area">
+    <div id="topGrid" class="top-grid"></div>
+
+    <div class="new-thread">
+      <div class="thread-head">
+        <p>new thread</p>
+        <span>@ssejinnnn</span>
+      </div>
+
+      <input id="postTitle" type="text" placeholder="What do you need advice on?">
+
+      <textarea id="postText" placeholder="Describe the item, outfit, or exchange question. You can ask about styling, heart pricing, repair, or whether something is worth listing."></textarea>
+
+      <div class="thread-note">
+        <p>Every 5 advice posts = ♡ x 1</p>
+        <p>Keep advice clear, honest, and useful.</p>
+      </div>
+
+      <button id="postBtn">Post to Share</button>
+    </div>
+  </section>
+
+  <section id="midGrid" class="mid-grid"></section>
+
+  <section id="smallGrid" class="small-grid"></section>
+</main>
+
+<a href="../home/home.html" class="back">←</a>
+
+<script src="advice.js"></script>
+</body>
+</html>
