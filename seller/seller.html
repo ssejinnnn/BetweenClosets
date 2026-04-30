@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Profile | Between Closets</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seller.css">
+</head>
+
+<body>
+  <header>
+    <div class="page-title"><p>profile</p></div>
+
+    <a href="../home/index.html" class="logo">Between Closets</a>
+
+    <nav>
+      <a href="../home/index.html">home</a>
+      <a href="../closet/closet.html">closet</a>
+      <a href="../advice/advice.html">share</a>
+      <a href="../style/style.html">style</a>
+      <a href="../about/about.html">about</a>
+      <a href="../seller/seller.html">profile</a>
+      <a href="../login/login.html">log in</a>
+    </nav>
+  </header>
+
+  <main class="seller-page">
+    <section class="left-panel">
+      <img src="./image/model3.png" alt="seller model" class="model-img">
+
+      <div class="seller-actions">
+        <button id="messageBtn">Message Seller</button>
+        <button id="tradeBtn">Request Trade</button>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="top-boxes">
+        <section class="profile-box">
+          <div class="profile-text">
+            <p class="label">seller</p>
+            <h1>Sejin Song</h1>
+            <p class="username">@ssejinnnn</p>
+
+            <p class="bio">
+              Loves mixing minimal pieces with vintage accents.<br>
+              Mostly trading items in good condition.
+            </p>
+
+            <div class="heart-total">
+              <span>♡</span>
+              <p>x 52</p>
+            </div>
+
+            <div class="stats">
+              <div>
+                <span>12</span>
+                <p>items</p>
+              </div>
+              <div>
+                <span>32</span>
+                <p>reviews</p>
+              </div>
+              <div>
+                <span>4.8</span>
+                <p>rating</p>
+              </div>
+            </div>
+          </div>
+
+          <img src="./image/qr.jpg" alt="qr code" class="qr">
+        </section>
+
+        <section class="review-box">
+          <p class="review-title">view reviews</p>
+
+          <div class="review-line">
+            “The item was exactly as described.”
+            <span>— jia</span>
+          </div>
+
+          <div class="review-line">
+            “Beautiful styling taste and fast response.”
+            <span>— lena</span>
+          </div>
+
+          <div class="review-line">
+            “Everything felt easy and thoughtful.”
+            <span>— mina</span>
+          </div>
+
+          <div class="review-line">
+            “The piece arrived in perfect condition.”
+            <span>— yuna</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="seller-items">
+        <div class="section-head">
+          <h2>Items from this seller</h2>
+          <p>available for heart exchange</p>
+        </div>
+
+        <div class="item-row">
+          <article>
+            <p class="price">♡ x 36</p>
+            <img src="../closet/image/acc/viviannewestwoodnecklace.jpg" alt="necklace">
+            <p class="item-name">Vivienne Westwood Pearl Necklace</p>
+            <p class="item-desc">pearl orb necklace</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 22</p>
+            <img src="../closet/image/acc/watch.jpg" alt="watch">
+            <p class="item-name">Pearl Watch</p>
+            <p class="item-desc">white pearl watch</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 25</p>
+            <img src="../closet/image/top/Cherry Top.jpg" alt="cherry top">
+            <p class="item-name">Cherry Top</p>
+            <p class="item-desc">pink cherry tank</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 19</p>
+            <img src="../closet/image/bottom/Cherry Skirt.jpg" alt="cherry skirt">
+            <p class="item-name">Cherry Skirt</p>
+            <p class="item-desc">white cherry skirt</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 7</p>
+            <img src="../closet/image/top/Bunny Top.jpg" alt="bunny top">
+            <p class="item-name">Bunny Top</p>
+            <p class="item-desc">graphic black top</p>
+          </article>
+        </div>
+      </section>
+    </section>
+   
+  </main>
+
+  <div id="messageModal" class="modal">
+    <div class="modal-box">
+      <button id="closeMessage" class="modal-close">×</button>
+
+      <p class="modal-label">message seller</p>
+      <h2>Send a message to Sejin</h2>
+
+      <textarea placeholder="Hi, I’m interested in this item. Is it still available?"></textarea>
+
+      <button id="sendMessage" class="send-btn">Send Message</button>
+      <p id="sentText" class="sent-text">Message sent. The seller will get back to you soon.</p>
+    </div>
+  </div>
+
+  <a href="../detail/detail.html" class="back">←</a>
+
+  <script src="seller.js"></script>
+</body>
+</html>
