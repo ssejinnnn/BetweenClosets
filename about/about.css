@@ -11,7 +11,6 @@ body{
   overflow:auto;
 }
 
-/* header */
 header{
   height:82px;
   display:grid;
@@ -22,7 +21,24 @@ header{
   border-top:8px solid #56343d;
 }
 
-.page-title{ font-size:14px; }
+.page-title{
+  font-size:14px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.add-post{
+  color:#111;
+  text-decoration:none;
+  font-size:24px;
+  line-height:1;
+  margin-top:1px;
+}
+
+.add-post:hover{
+  opacity:.45;
+}
 
 .logo{
   font-family:"Mea Culpa", cursive;
@@ -43,7 +59,10 @@ nav a{
   color:#111;
 }
 
-/* info bar */
+nav a:hover{
+  opacity:.5;
+}
+
 .intro{
   display:flex;
   justify-content:center;
@@ -58,20 +77,18 @@ nav a{
   opacity:.6;
 }
 
-/* page */
 .about-page{
-  padding:26px 70px 70px;
+  padding:70px 70px 70px;
 }
 
-/* text */
 .about-head{
-  margin-bottom:18px;
+  margin-bottom:140px;
 }
 
 .about-head h1{
   font-size:23px;
   font-weight:400;
-  margin-bottom:6px;
+  margin-bottom:10px;
 }
 
 .about-head span{
@@ -79,83 +96,52 @@ nav a{
   opacity:.65;
 }
 
-/* board */
-.about-board{
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  grid-template-rows:180px 190px;  /* 🔥 더 줄임 */
-  border-left:1px solid #111;
-  border-top:1px solid #111;
+.about-row{
+  display:flex;
+  justify-content:center;
+  gap:48px;
+     transform:translateY(-30px);
 }
 
-.about-card,
-.heart-panel{
-  border-right:1px solid #111;
-  border-bottom:1px solid #111;
-}
-
-/* cards */
 .about-card{
-  padding:18px 22px;   /* 🔥 더 타이트 */
+  width:230px;
+  height:230px;
+  border:1px solid #111;
+  padding:26px 18px;
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  gap:18px;
+  justify-content:flex-start;
+  gap:28px;
+  background:white;
+}
+.about-card:hover{
+  background:#f5edf1;
+  transform: scale(1.1); 
+  border-color:#56343d;
 }
 
-.about-card.pink{
-  background:#f5edf1;
+.about-card span{
+  font-size:16px;
 }
 
 .about-card h2{
-  font-size:18.5px;   /* 🔥 줄임 */
+  font-size:18px;
   font-weight:400;
+  line-height:1.15;
+}
+
+.about-card h3{
+  font-size:12px;
+  font-weight:300;
+  line-height:1.15;
 }
 
 .about-card p{
   font-size:12px;
   line-height:1.35;
   opacity:.6;
-  max-width:260px;
 }
 
-/* heart */
-.heart-panel{
-  grid-column:2 / 4;
-  background:#f5edf1;
-  padding:18px 22px;
-}
-
-.heart-panel h2{
-  font-size:18.5px;
-  margin-bottom:16px;
-}
-
-.heart-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-.heart-grid div{
-  height:90px;   /* 🔥 핵심: 더 작게 */
-  border:1px solid #111;
-  padding:14px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.heart-grid h3{
-  font-size:18px;
-}
-
-.heart-grid p{
-  font-size:11px;
-  opacity:.6;
-}
-
-/* back */
 .back{
   position:fixed;
   left:34px;
@@ -163,4 +149,21 @@ nav a{
   font-size:44px;
   text-decoration:none;
   color:#111;
+  transition:.25s ease;
+}
+
+.back:hover{
+  transform:translateX(-6px);
+  opacity:.6;
+}
+
+@media(max-width:1000px){
+  .about-row{
+    flex-wrap:wrap;
+    gap:24px;
+  }
+
+  .about-head{
+    margin-bottom:70px;
+  }
 }
