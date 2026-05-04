@@ -23,6 +23,21 @@ header{
 
 .page-title{
   font-size:14px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.add-post{
+  color:#111;
+  text-decoration:none;
+  font-size:24px;
+  line-height:1;
+  margin-top:1px;
+}
+
+.add-post:hover{
+  opacity:.45;
 }
 
 .logo{
@@ -48,48 +63,43 @@ nav a{
 nav a:hover{
   opacity:.5;
 }
+
+/* intro */
 .intro{
   width:100%;
   display:flex;
   justify-content:center;
-  margin-top:14px;      /* 🔥 여기 핵심 (전엔 -값이라 붙음) */
-  margin-bottom:34px;
   background:white;
-     border-top:1px solid #111;
-  border-bottom:1px solid #111;
-    padding:10px 0;  /* 이거 꼭 있어야 함 */
-    border-color: rgba(0,0,0,0.4);
+  border-top:1px solid rgba(0,0,0,0.4);
+  border-bottom:1px solid rgba(0,0,0,0.4);
+  padding:10px 0;
 }
 
 .intro p{
   width:560px;
   text-align:center;
   font-size:14px;
-  line-height:0.5;
+  line-height:1;
   opacity:.65;
-
 }
 
 /* center layout */
 .login-page{
-  height:calc(100vh - 82px);
+  min-height:calc(100vh - 122px);
   display:flex;
   justify-content:center;
   align-items:center;
-  padding-bottom:110px;
+  padding-bottom:80px;
 }
 
+/* box */
 .login-box{
-  width:390px;
+  width:470px;
+  padding:42px 46px 38px;
+  border:1px solid #111;
+  background:white;
   text-align:left;
-}
-
-.login-label{
-  font-size:12px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  opacity:.45;
-  margin-bottom:12px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
 }
 
 .login-box h1{
@@ -100,9 +110,9 @@ nav a:hover{
 
 .bonus-text{
   font-size:15px;
-  line-height:0.5;
+  line-height:1.2;
   opacity:.65;
-  margin-bottom:32px;
+  margin-bottom:28px;
 }
 
 .bonus-text span{
@@ -123,6 +133,12 @@ input{
   padding:0 14px;
   font-family:"Abel", sans-serif;
   font-size:15px;
+  outline:none;
+}
+
+input:focus{
+  border-color:#56343d;
+  background:#fbf6f8;
 }
 
 button{
@@ -151,4 +167,21 @@ button:hover{
   text-decoration:underline;
   text-underline-offset:4px;
   cursor:pointer;
+}
+
+/* responsive */
+@media(max-width:600px){
+  nav{
+    gap:14px;
+  }
+
+  .login-page{
+    padding:40px 20px 80px;
+    align-items:flex-start;
+  }
+
+  .login-box{
+    width:100%;
+    padding:34px 28px;
+  }
 }
