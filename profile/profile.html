@@ -2,49 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Between Closets</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Abel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="profile.css">
-  <script defer src="profile.js"></script>
 </head>
+
 <body>
+  <header>
+    <div class="page-title">
+      <p>profile</p>
+      <a href="../post/post.html" class="add-post">+</a>
+    </div>
 
- <header>
-  <div class="page-title">closet</div>
+    <a href="../home/index.html" class="logo">Between Closets</a>
 
-  <a href="../home/index.html" class="logo">Between Closets</a>
+    <nav>
+      <a href="../home/index.html">home</a>
+      <a href="../closet/closet.html">closet</a>
+      <a href="../advice/advice.html">share</a>
+      <a href="../style/style.html">style</a>
+      <a href="../about/about.html">about</a>
+      <a href="../profile/profile.html">profile</a>
+      <a href="../login/login.html">log in</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="../home/index.html">home</a>
-    <a href="../closet/closet.html">closet</a>
-    <a href="../advice/advice.html">share</a>
-    <a href="#">style</a>
-    <a href="#">about</a>
-    <a href="../seller/seller.html">profile</a>
-    <a href="../login/login.html">log in</a>
-  </nav>
-</header>
+  <main class="seller-page">
+    <section class="left-panel">
+      <div class="main-photo-wrap">
+        <img id="profilePhoto" src="./image/model4.webp" alt="profile model" class="model-img">
 
-
-    <h1>My Profile</h1>
-
-    <section class="profile">
-      <div class="mirror"></div>
-
-      <div class="info">
-        <h2>Sejin Song</h2>
-        <p>@ssejinnnn</p>
-        <p>
-          I like mixing minimal pieces with vintage details.
-          My closet is soft, strange, and a little romantic.
-        </p>
-
-        <div class="hearts">♡ 50 hearts</div>
-
-        <button id="editBtn">Edit Profile</button>
-        <p id="editMessage"></p>
+        <label class="main-edit-photo">
+          Edit Photo
+          <input id="editPhoto" type="file" accept="image/*">
+        </label>
       </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="top-boxes">
+        <section class="profile-box">
+          <div class="profile-text">
+            <div class="profile-top">
+              <p class="label">profile</p>
+              <button id="editProfileBtn" class="inline-edit-btn">edit</button>
+            </div>
+
+            <h1 id="profileName">Sejin Song</h1>
+            <input id="editName" class="edit-input hidden" type="text">
+
+            <p id="profileUsername" class="username">@ssejinnnn</p>
+            <input id="editUsername" class="edit-input hidden" type="text">
+
+            <p id="profileBio" class="bio">
+              Loves mixing minimal pieces with vintage accents.<br>
+              Mostly trading items in good condition.
+            </p>
+            <textarea id="editBio" class="edit-textarea hidden"></textarea>
+
+            <div class="heart-total">
+              <span>♡</span>
+              <p id="profileHearts">x 52</p>
+              <input id="editHearts" class="edit-heart hidden" type="number">
+            </div>
+
+            <div class="stats">
+              <div><span>12</span><p>items</p></div>
+              <div><span>32</span><p>reviews</p></div>
+              <div><span>4.8</span><p>rating</p></div>
+            </div>
+
+            <div id="editActions" class="edit-actions hidden">
+              <button id="saveProfileBtn" type="button">save</button>
+              <button id="cancelEditBtn" type="button">cancel</button>
+            </div>
+          </div>
+
+          <div class="qr-wrap">
+            <img src="./image/qr.jpg" alt="profile qr" class="qr">
+          </div>
+        </section>
+
+        <section class="review-box">
+          <p class="review-title">profile notes</p>
+          <div class="review-line">closet exchange based on hearts <span>active</span></div>
+          <div class="review-line">prefers clean condition descriptions <span>careful</span></div>
+          <div class="review-line">styling taste: minimal with vintage accents <span>style</span></div>
+          <div class="review-line">location around Parsons / Union Square <span>NYC</span></div>
+        </section>
+      </div>
+
+      <section class="seller-items">
+        <div class="section-head">
+          <h2>Items from this profile</h2>
+          <p>available for heart exchange</p>
+        </div>
+
+        <div class="item-row">
+          <article>
+            <p class="price">♡ x 36</p>
+            <img src="../closet/image/acc/viviannewestwoodnecklace.jpg" alt="necklace">
+            <p class="item-name">Vivienne Westwood Pearl Necklace</p>
+            <p class="item-desc">pearl orb necklace</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 22</p>
+            <img src="../closet/image/acc/watch.jpg" alt="watch">
+            <p class="item-name">Pearl Watch</p>
+            <p class="item-desc">white pearl watch</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 25</p>
+            <img src="../closet/image/top/Cherry Top.jpg" alt="cherry top">
+            <p class="item-name">Cherry Top</p>
+            <p class="item-desc">pink cherry tank</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 19</p>
+            <img src="../closet/image/bottom/Cherry Skirt.jpg" alt="cherry skirt">
+            <p class="item-name">Cherry Skirt</p>
+            <p class="item-desc">white cherry skirt</p>
+          </article>
+
+          <article>
+            <p class="price">♡ x 7</p>
+            <img src="../closet/image/top/Bunny Top.jpg" alt="bunny top">
+            <p class="item-name">Bunny Top</p>
+            <p class="item-desc">graphic black top</p>
+          </article>
+        </div>
+      </section>
     </section>
   </main>
 
+  <a href="../detail/detail.html" class="back">←</a>
+
+  <script src="profile.js"></script>
 </body>
 </html>
