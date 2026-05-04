@@ -36,8 +36,23 @@ header{
 
 .page-title{
   font-size:14px;
+  display:flex;
+  gap:10px;
+  align-items:center;
 }
 
+.add-post{
+  color:#111;
+  text-decoration:none;
+  font-size:24px;
+  line-height:1;
+  margin-top:1px;
+}
+
+.add-post:hover{
+  opacity:.45;
+  
+}
 nav{
   justify-self:end;
   display:flex;
@@ -61,7 +76,7 @@ nav a:hover{
   left:0;
   width:100%;
   height:calc(100vh - 82px);
-  background:#f5edf1;
+  background:#ffffff;
   z-index:30;
   overflow:hidden;
   transition:opacity .45s ease;
@@ -118,25 +133,7 @@ button:hover{
 }
 
 /* decorative lines */
-.top-line{
-  position:absolute;
-  top:2px;
-  left:50%;
-  width:1px;
-  height:80px;
-  background:#111;
-  opacity:.7;
-}
 
-.bottom-line{
-  position:absolute;
-  left:50%;
-  bottom:0;
-  width:1px;
-  height:80px;
-  background:#111;
-  opacity:.7;
-}
 
 .bottom-line span{
   position:absolute;
@@ -172,7 +169,7 @@ button:hover{
   top:82px;
   width:50%;
   height:calc(100vh - 82px);
-  background:#f5edf1;
+  background:#ffffff;
   z-index:20;
   transition:transform .9s cubic-bezier(.77,0,.18,1);
 }
