@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post | Between Closets</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+<header>
+  <div class="page-title">create post</div>
+
+  <a href="../home/home.html" class="logo">Between Closets</a>
+
+  <nav>
+    <a href="../home/index.html">home</a>
+    <a href="../closet/closet.html">closet</a>
+    <a href="../advice/advice.html">share</a>
+    <a href="../style/style.html">style</a>
+    <a href="../about/about.html">about</a>
+    <a href="../profile/profile.html">profile</a>
+    <a href="../login/login.html">log in</a>
+  </nav>
+</header>
+
+<section class="post-intro">
+  Choose where your post belongs. It will be sent to the right page.
+</section>
+
+<main class="post-page">
+  <form class="post-box">
+
+    <div class="field">
+      <label>category</label>
+
+      <div class="category-options">
+        <button type="button" class="category active" data-page="closet">closet</button>
+        <button type="button" class="category" data-page="share">share / advice</button>
+        <button type="button" class="category" data-page="style">style</button>
+      </div>
+    </div>
+
+    <div id="closetFields" class="closet-fields">
+      <div class="closet-row">
+        <div class="field">
+          <label>item type</label>
+          <input id="postType" type="text" placeholder="top / bottom / accessory">
+        </div>
+
+        <div class="field">
+          <label>hearts</label>
+          <input id="postHearts" type="number" placeholder="32">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>condition</label>
+        <input id="postCondition" type="text" placeholder="gently used / 9 out of 10">
+      </div>
+
+      <div class="field">
+        <label>exchange</label>
+        <input id="postExchange" type="text" placeholder="hearts only">
+      </div>
+
+      <div class="field">
+        <label>location</label>
+        <input id="postLocation" type="text" placeholder="Parsons / Union Square">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>title</label>
+      <input id="postTitle" type="text" placeholder="What are you sharing?">
+    </div>
+
+    <div class="field">
+      <label>description</label>
+      <textarea id="postText" placeholder="Write about the item, outfit, question, or styling idea."></textarea>
+    </div>
+
+    <div class="field">
+      <label>image</label>
+      <input id="postImage" type="file" accept="image/*">
+
+      <div id="imagePreview" class="image-preview">
+        <span>image preview</span>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">post</button>
+
+  </form>
+</main>
+
+<a href="../advice/advice.html" class="back">←</a>
+
+<script src="post.js"></script>
+</body>
+</html>
