@@ -26,6 +26,22 @@ header{
 
 .page-title{
   font-size:14px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.add-post{
+  color:#111;
+  text-decoration:none;
+  font-size:24px;
+  line-height:1;
+  margin-top:1px;
+}
+
+.add-post:hover{
+  opacity:.45;
+  
 }
 
 .logo{
@@ -92,7 +108,7 @@ nav a:hover{
 }
 
 .center-look img{
-  max-width:200%;
+  max-width:180%;
   max-height:540px;
   object-fit:contain;
   transition:.45s ease;
@@ -267,12 +283,12 @@ nav a:hover{
 }
 
 .card-three{
-  left:30%;
+  left:27%;
   top:8%;
 }
 
 .card-four{
-  right:30%;
+  right:27%;
   top:8%;
 }
 
@@ -414,4 +430,37 @@ nav a:hover{
   .style-card::after{
     width:100%;
   }
+}
+/* 기존 style.css 그대로 두고 이 부분만 추가 */
+
+.gender-toggle{
+  position:absolute;
+  left:50%;
+  top:-5px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:70px;
+  z-index:30;
+}
+
+.gender-btn{
+  width:24px;
+  height:24px;
+  border:1px solid rgba(0,0,0,.25);
+  background:#eee;
+  color:#111;
+  text-decoration:none;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+  transition:.2s ease;
+}
+
+.gender-btn:hover,
+.gender-btn.active{
+  background:#111;
+  color:white;
+  border-color:#111;
 }

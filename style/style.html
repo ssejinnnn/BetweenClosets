@@ -11,7 +11,10 @@
 
 <body>
   <header>
-    <div class="page-title">style</div>
+    <div class="page-title">
+      style
+      <a href="../post/post.html" class="add-post">+</a>
+    </div>
 
     <a href="../home/home.html" class="logo">Between Closets</a>
 
@@ -21,7 +24,7 @@
       <a href="../advice/advice.html">share</a>
       <a href="../style/style.html">style</a>
       <a href="../about/about.html">about</a>
-      <a href="../seller/seller.html">profile</a>
+      <a href="../profile/profile.html">profile</a>
       <a href="../login/login.html">log in</a>
     </nav>
   </header>
@@ -31,6 +34,12 @@
   </section>
 
   <main class="style-page">
+
+    <div class="gender-toggle">
+      <a href="../style/style.html" class="gender-btn active">W</a>
+      <a href="../style2/style2.html" class="gender-btn">M</a>
+    </div>
+
     <section class="center-look">
       <img id="mainLook" src="./image/1.png" alt="selected look">
       <p id="mainDay">MON</p>
@@ -38,8 +47,7 @@
     </section>
 
     <section class="card-stage">
-
-      <article class="style-card card-one" data-img="1" data-day="MON" data-user="@closet_loop">
+      <article class="style-card card-one active" data-img="1" data-day="MON" data-user="@closet_loop">
         <div class="card-inner">
           <div class="card-face card-front" data-label="APR 23" data-user="@closet_loop">
             <img src="./image/1.png" alt="Monday look">
@@ -142,8 +150,6 @@
           </div>
         </div>
       </article>
-
-     
     </section>
   </main>
 
